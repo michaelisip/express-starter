@@ -1,6 +1,8 @@
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
+const expressRateLimit = require('express-rate-limit')
+const hpp = require('hpp')
 
 module.exports = (app) => {
 
@@ -28,6 +30,20 @@ module.exports = (app) => {
      */
     app.use(bodyParser.json({ extended: false }))
 
+    /**
+     * Limit incoming request to protect app from brute force attacks
+     */
+    app.use(expressRateLimit({
+        windowMs: 15 * 60 * 1000,
+        max: 1000
+    }))
+
+    /**
+     * Protection against http parameter pollution attacks
+     * 
+     * Make sure to parse body first
+     */
+    app.use(hpp())
 
     /**
      * Add custom middleware functions here..
