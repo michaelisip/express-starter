@@ -1,0 +1,33 @@
+{
+  "name": "express-starter",
+  "version": "1.0.0",
+  "description": "Starter files for an express js project",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "prod": "pm2 start server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mj-isip23/express-starter.git"
+  },
+  "keywords": [
+    "express",
+    "expressjs"
+  ],
+  "author": "MJ Isip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mj-isip23/express-starter/issues"
+  },
+  "homepage": "https://github.com/mj-isip23/express-starter#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.4",
+    "pm2": "^4.1.2"
+  }
+}
