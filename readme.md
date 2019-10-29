@@ -11,5 +11,6 @@ Simple starter project for express js
 5. [Morgan](https://www.npmjs.com/package/morgan)
 6. [Nodemon](https://www.npmjs.com/package/nodemon)
 7. [Pm2](https://www.npmjs.com/package/pm2)
+8. [MySQL](https://www.npmjs.com/package/mysql)
 
 > If error occurs after cloning, just run `npm update` and then try again.
